@@ -9,11 +9,12 @@ import os
 file_id = "1xMYZbuR4mv81pPdg-qS7ud4gQ3uFJVJe"
 url = 'https://drive.google.com/file/d/1xMYZbuR4mv81pPdg-qS7ud4gQ3uFJVJe/view?usp=sharing'
 model_path = "trained_plant_disease_model.keras"
-model = tf.keras.models.load_model(model_path)
+
 
 if not os.path.exists(model_path):
     st.warning("Downloading model from Google Drive...")
     gdown.download(url, model_path, quiet=False)
+model = tf.keras.models.load_model(model_path)
 
 # Define class labels for potato leaf diseases
 class_labels = ['Potato_Early_blight', 'Potato_Late_blight', 'Potato_healthy']
