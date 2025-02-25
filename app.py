@@ -4,8 +4,8 @@ import numpy as np
 import gdown
 import os
 
-file_id = "1xMYZbuR4mv81pPdg-qS7ud4gQ3uFJVJe"
-url = 'https://drive.google.com/file/d/1xMYZbuR4mv81pPdg-qS7ud4gQ3uFJVJe/view?usp=sharing'
+file_id = "1_9Q28QeJXnyRCH18IVxpX5KhuDtZC40c"
+url = 'https://drive.google.com/uc?id=1_9Q28QeJXnyRCH18IVxpX5KhuDtZC40c'
 model_path = "trained_plant_disease_model.keras"
 
 
@@ -52,5 +52,5 @@ elif(app_mode=="DISEASE RECOGNITION"):
         st.write("Our Prediction")
         result_index = model_prediction(test_image)
         #Reading Labels
-        class_name = ['Potato__Early_blight', 'Potato_Late_blight', 'Potato__healthy']
+        class_name = ['Potato___Early_blight', 'Potato___Late_blight', 'Potato___healthy']
         st.success("Model is Predicting it's a {}".format(class_name[result_index]))
